@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="NodeItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUb-6q-CGA">
+                        <rect key="frame" x="24" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="230" translatesAutoresizingMaskIntoConstraints="NO" id="grI-DA-p7V">
+                        <rect key="frame" x="24" y="40" width="230" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G9-5T-skj">
+                        <rect key="frame" x="274" y="24" width="32" height="32"/>
+                        <state key="normal" image="icon_add.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="disabled" image="icon_finish.png"/>
+                        <connections>
+                            <action selector="optButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zg1-rE-57G"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="grI-DA-p7V" secondAttribute="bottom" constant="18" id="1zU-Eu-tZp"/>
+                    <constraint firstItem="grI-DA-p7V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Iag-uc-iaw"/>
+                    <constraint firstAttribute="trailing" secondItem="grI-DA-p7V" secondAttribute="trailing" constant="66" id="Mx0-lR-pCg"/>
+                    <constraint firstItem="uUb-6q-CGA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="SBm-z6-nvX"/>
+                    <constraint firstItem="uUb-6q-CGA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="btw-Qi-MUI"/>
+                    <constraint firstItem="grI-DA-p7V" firstAttribute="top" secondItem="uUb-6q-CGA" secondAttribute="bottom" constant="8" id="lB4-3A-uqb"/>
+                    <constraint firstAttribute="centerY" secondItem="5G9-5T-skj" secondAttribute="centerY" constant="-0.5" id="qeq-wU-KQA"/>
+                    <constraint firstAttribute="trailing" secondItem="5G9-5T-skj" secondAttribute="trailing" constant="14" id="wnt-rw-OZB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="optButton" destination="5G9-5T-skj" id="qq2-9J-Suf"/>
+                <outlet property="subTitleLabel" destination="grI-DA-p7V" id="JkL-Hf-aKN"/>
+                <outlet property="titleLabel" destination="uUb-6q-CGA" id="8oo-Sr-KCa"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_add.png" width="32" height="32"/>
+        <image name="icon_finish.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

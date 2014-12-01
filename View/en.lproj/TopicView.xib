@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="203" id="Jav-D6-DMk" customClass="TopicView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jav-D6-DMk" id="Rsi-fT-4pe">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-im-6oO">
+                        <rect key="frame" x="10" y="10" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="KII-S6-MdU"/>
+                            <constraint firstAttribute="height" constant="48" id="qGb-WL-6IG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="CeL-2x-dEU">
+                        <rect key="frame" x="74" y="10" width="232" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-hf-7zK" customClass="SymbolAttributedLabel">
+                        <rect key="frame" x="20" y="118" width="280" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhS-7x-sGA">
+                        <rect key="frame" x="0.0" y="155" width="320" height="47"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_comment.png" translatesAutoresizingMaskIntoConstraints="NO" id="kYy-K6-jru">
+                                <rect key="frame" x="11" y="8" width="33" height="30"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gis-tx-MnR">
+                                <rect key="frame" x="52" y="12" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Yq-zLc">
+                                <rect key="frame" x="266" y="0.0" width="47" height="47"/>
+                                <state key="normal" image="refresh.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="Jav-D6-DMk" eventType="touchUpInside" id="GGX-UP-aZs"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-Gv-FIr">
+                                <rect key="frame" x="279" y="14" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="0B0-s8-RP2"/>
+                            <constraint firstAttribute="height" constant="47" id="uSQ-zj-8z7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LhS-7x-sGA" firstAttribute="top" secondItem="DWx-hf-7zK" secondAttribute="bottom" constant="19" id="54N-TZ-Jsv"/>
+                    <constraint firstAttribute="trailing" secondItem="DWx-hf-7zK" secondAttribute="trailing" constant="20" id="9jS-Gd-ona"/>
+                    <constraint firstItem="CeL-2x-dEU" firstAttribute="leading" secondItem="nVE-im-6oO" secondAttribute="trailing" constant="16" id="AoM-vP-aZH"/>
+                    <constraint firstItem="DWx-hf-7zK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nVE-im-6oO" secondAttribute="bottom" constant="15" id="C7o-1L-H7V"/>
+                    <constraint firstItem="DWx-hf-7zK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CeL-2x-dEU" secondAttribute="bottom" constant="15" id="DCI-Qi-JUi"/>
+                    <constraint firstAttribute="trailing" secondItem="LhS-7x-sGA" secondAttribute="trailing" id="LjH-Z1-Mrd"/>
+                    <constraint firstAttribute="bottom" secondItem="LhS-7x-sGA" secondAttribute="bottom" id="SCb-JY-5xV"/>
+                    <constraint firstItem="nVE-im-6oO" firstAttribute="leading" secondItem="Rsi-fT-4pe" secondAttribute="leading" constant="10" id="TNn-Jb-Zzb"/>
+                    <constraint firstItem="DWx-hf-7zK" firstAttribute="leading" secondItem="Rsi-fT-4pe" secondAttribute="leading" constant="20" id="gvn-Aj-VZp"/>
+                    <constraint firstItem="LhS-7x-sGA" firstAttribute="leading" secondItem="Rsi-fT-4pe" secondAttribute="leading" id="h62-rz-lwL"/>
+                    <constraint firstAttribute="trailing" secondItem="CeL-2x-dEU" secondAttribute="trailing" constant="14" id="qHV-6j-XXr"/>
+                    <constraint firstItem="CeL-2x-dEU" firstAttribute="top" secondItem="Rsi-fT-4pe" secondAttribute="top" constant="10" id="syH-Sx-9TD"/>
+                    <constraint firstItem="nVE-im-6oO" firstAttribute="top" secondItem="Rsi-fT-4pe" secondAttribute="top" constant="10" id="vOH-FI-BJq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityView" destination="6Pd-Gv-FIr" id="AZU-Tf-Ulx"/>
+                <outlet property="avatarView" destination="nVE-im-6oO" id="DBL-Pl-rnB"/>
+                <outlet property="commentLabel" destination="gis-tx-MnR" id="E6f-5t-RoP"/>
+                <outlet property="contentLabel" destination="DWx-hf-7zK" id="Z4h-R0-uFZ"/>
+                <outlet property="refreshButton" destination="Dh3-Yq-zLc" id="Ypt-yy-6aB"/>
+                <outlet property="titleLabel" destination="CeL-2x-dEU" id="c2q-UD-T0q"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="170.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_comment.png" width="48" height="48"/>
+        <image name="refresh.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

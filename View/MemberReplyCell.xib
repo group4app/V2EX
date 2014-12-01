@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="MemberReplyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reply" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-zL-1yH">
+                        <rect key="frame" x="20" y="16" width="280" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1F-A7-5M7">
+                        <rect key="frame" x="20" y="42" width="280" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="topic title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="PIT-H2-efk">
+                                <rect key="frame" x="8" y="8" width="264" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-nD-TcR">
+                                <rect key="frame" x="8" y="43" width="72" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PIT-H2-efk" secondAttribute="trailing" constant="8" id="3NE-KZ-TeM"/>
+                            <constraint firstItem="PIT-H2-efk" firstAttribute="leading" secondItem="E1F-A7-5M7" secondAttribute="leading" constant="8" id="Kv6-rY-314"/>
+                            <constraint firstItem="PIT-H2-efk" firstAttribute="top" secondItem="E1F-A7-5M7" secondAttribute="top" constant="8" id="NHo-fh-Bau"/>
+                            <constraint firstItem="WU1-nD-TcR" firstAttribute="leading" secondItem="E1F-A7-5M7" secondAttribute="leading" constant="8" id="nn1-3n-2nH"/>
+                            <constraint firstItem="WU1-nD-TcR" firstAttribute="top" secondItem="PIT-H2-efk" secondAttribute="bottom" constant="17" id="s6i-GP-6XI"/>
+                            <constraint firstAttribute="bottom" secondItem="WU1-nD-TcR" secondAttribute="bottom" constant="4" id="ypD-yY-X0u"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="E1F-A7-5M7" secondAttribute="trailing" constant="12" id="081-lW-j91"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E1F-A7-5M7" secondAttribute="bottom" constant="24.5" id="37L-gs-eAI"/>
+                    <constraint firstItem="uhr-zL-1yH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="7ew-H6-rvX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uhr-zL-1yH" secondAttribute="trailing" constant="12" id="Jes-UY-hK2"/>
+                    <constraint firstItem="E1F-A7-5M7" firstAttribute="top" secondItem="uhr-zL-1yH" secondAttribute="bottom" constant="8" id="mLZ-JX-BTL"/>
+                    <constraint firstItem="uhr-zL-1yH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="tTM-M4-J9f"/>
+                    <constraint firstItem="E1F-A7-5M7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="yDJ-qR-4rw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="innerView" destination="E1F-A7-5M7" id="eBc-oh-SrP"/>
+                <outlet property="nameLabel" destination="WU1-nD-TcR" id="qfL-y0-Fqp"/>
+                <outlet property="replyLabel" destination="uhr-zL-1yH" id="57a-X6-h01"/>
+                <outlet property="titleLabel" destination="PIT-H2-efk" id="uVc-ff-CjO"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="167"/>
+        </tableViewCell>
+    </objects>
+</document>

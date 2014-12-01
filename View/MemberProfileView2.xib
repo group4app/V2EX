@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MemberProfileView2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVs-kb-dUh">
+                    <rect key="frame" x="136" y="18" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="XNo-a4-wmd"/>
+                        <constraint firstAttribute="width" constant="48" id="uv3-2r-oTr"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXK-Rf-2Ey">
+                    <rect key="frame" x="139" y="84" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gVs-kb-dUh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="078-Dq-jJ8"/>
+                <constraint firstAttribute="centerX" secondItem="gVs-kb-dUh" secondAttribute="centerX" id="0EG-fO-YJR"/>
+                <constraint firstAttribute="bottom" secondItem="OXK-Rf-2Ey" secondAttribute="bottom" constant="15" id="LGe-vv-0Ei"/>
+                <constraint firstItem="OXK-Rf-2Ey" firstAttribute="top" secondItem="gVs-kb-dUh" secondAttribute="bottom" constant="18" id="TuT-Sl-ViI"/>
+                <constraint firstAttribute="centerX" secondItem="OXK-Rf-2Ey" secondAttribute="centerX" id="WW4-v4-Bwq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avatarView" destination="gVs-kb-dUh" id="Lb5-aj-TKJ"/>
+                <outlet property="rankLabel" destination="OXK-Rf-2Ey" id="EZd-gf-JMT"/>
+            </connections>
+        </view>
+    </objects>
+</document>
